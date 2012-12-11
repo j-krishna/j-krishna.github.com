@@ -1,0 +1,59 @@
+
+<section id="content">
+	<header>
+				<h2>{{ page.title }}</h2>
+				<h3 class="date"><date class="date-pub" title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}" pubdate>Published {{ page.date | date: "%B %d, %Y" }}</date></h3>
+	</header>
+<article class="post-page">
+	
+	{{ content }}
+								
+			<div class="meta">
+				<p class="date-publish">
+					Published: 
+					<date class="date-pub" title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}" pubdate>
+					<span class="month"><abbr>{{ page.date | date: '%B' }}</abbr></span>
+					<span class="day">{{ page.date | date: '%d' }},</span>
+					<span class="year">{{ page.date | date: '%Y' }}</span>
+					</date>
+				</p>
+				<ul class="list-category no-style">
+					<li class="list-head">Category: </li>
+					{% assign categories_list = page.categories %}
+					{% include JB/categories_list %}
+				</ul>
+				<ul class="list-tag no-style">
+					<li class="list-head no-ajaxy">Tags: </li>
+					{% assign tags_list = page.tags %}
+					{% include JB/tags_list %}
+				</ul>
+		</div><!-- meta -->
+				
+		<div class="comments">
+			
+			{% include JB/comments %}
+			
+		</div><!-- comments -->
+				
+		<footer class="post-foot">
+				<nav class="pagination">
+					<ul>
+						{% if page.previous %}
+						<li class="prev"><a class="internal" rel="prev"  href="{{ page.previous.url }}" title="View {{ page.previous.title }}">&laquo; {{ page.previous.title }}</a></li>
+						{% endif %}
+						{% if page.previous and page.next %}
+						<li class="pipe"> | </li>
+						{% endif %}
+						{% if page.next %}
+						<li class="next"><a class="internal" rel="next"  href="{{ page.next.url }}" title="View {{ page.next.title }}">{{ page.next.title }} &raquo;</a></li>
+						{% endif %}
+					</ul>
+				</nav>
+				<p class="gotop">
+					<a href="#content" class="no-ajaxy">Back to Top</a>
+				</p>
+		</footer>
+
+</article>
+
+</section>

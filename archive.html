@@ -3,8 +3,13 @@ layout: page
 title : Archive
 header : Post Archive
 group: navigation
+permalink: /archive/
 ---
 {% include JB/setup %}
 
+<article>
+<div class="long-list">
 {% assign posts_collate = site.posts %}
 {% include JB/posts_collate %}
+</div>
+</article>
