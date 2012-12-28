@@ -33,7 +33,7 @@ author :
 #Theme variables
 color: 'rgb(189,11,72)'
 logo: /assets/img/hand.png
-github_repo: joehand.github
+github_repo: j-krishna.github
 
 
 # The production_url is only used when full-domain names are needed
