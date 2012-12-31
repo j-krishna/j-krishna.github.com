@@ -1,0 +1,12 @@
+
+http://jkrishna.com/about/
+http://jkrishna.com/archive/
+http://jkrishna.com/assets/themes/the-zen/css/main.less
+http://jkrishna.com/atom.xml
+http://jkrishna.com/categories/
+http://jkrishna.com/index.html
+http://jkrishna.com/pages/
+http://jkrishna.com/sitemap.txt
+http://jkrishna.com/tags/
+
+http://jkrishna.com/2011/jekyll-introduction
