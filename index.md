@@ -1,19 +1,23 @@
 ---
 layout: page
-title: Hello World!
-tagline: Hello Jekyll
+title: Krishna's
+tagline: Software. Business.
 ---
 {% include JB/setup %}
 
-## Hello 
 
-Welcome to my new and shiny blog.
-
-This is using Jekyll with github. You can read more about setting up a blog here [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html).
-
-The theme and the design is forked from [Joe](https://github.com/JoeHand). Thanks Joe.
-
-Next up. 
-* Making a habit of regular posting
-* Integrating Twitter, Facebook, Google+
+<ul class="posts">
+     {% for post in site.posts %}
+     <li>
+          <h3>
+              <a href="{{ post.url }}">
+                  {{ post.title }}
+              </a>
+              <span class="post-date">
+                  {{ post.date | date_to_string }}
+             </span>
+         </h3>
+     </li>
+     {% endfor %}
+ </ul>
 
